@@ -24,7 +24,7 @@ func get_effects() -> Dictionary:
 
 
 func perform(actor, delta) -> bool:
-  var closest_stock = _get_closest_woodstock(actor)
+  var closest_stock = WorldState.get_closest_element("wood_stock", actor)
 
   if closest_stock:
     if closest_stock.position.distance_to(actor.position) < 10:
@@ -36,17 +36,4 @@ func perform(actor, delta) -> bool:
 
   return false
 
-
-func _get_closest_woodstock(actor):
-  var stocks = WorldState.get_elements("wood_stock")
-  var closest_stock
-  var closest_distance = 10000000
-
-  for stock in stocks:
-    var distance = actor.position.distance_to(stock.position)
-    if  distance < closest_distance:
-      closest_distance = distance
-      closest_stock = stock
-
-  return closest_stock
 

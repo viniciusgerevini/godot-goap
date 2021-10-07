@@ -21,7 +21,7 @@ func get_effects() -> Dictionary:
 
 
 func perform(actor, delta) -> bool:
-  var closest_cover = _get_closest_cover(actor)
+  var closest_cover = WorldState.get_closest_element("cover", actor)
 
   if closest_cover == null:
     return false
@@ -31,17 +31,3 @@ func perform(actor, delta) -> bool:
 
   actor.move_to(actor.position.direction_to(closest_cover.position), delta)
   return false
-
-
-func _get_closest_cover(actor):
-  var covers = WorldState.get_elements("cover")
-  var closest_cover
-  var closest_distance = 10000000
-
-  for cover in covers:
-    var distance = actor.position.distance_to(cover.position)
-    if  distance < closest_distance:
-      closest_distance = distance
-      closest_cover = cover
-
-  return closest_cover

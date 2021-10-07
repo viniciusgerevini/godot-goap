@@ -25,7 +25,7 @@ func get_effects() -> Dictionary:
 
 
 func perform(actor, delta) -> bool:
-  var _closest_tree = _get_closest_tree(actor)
+  var _closest_tree = WorldState.get_closest_element("tree", actor)
 
   if _closest_tree:
     if _closest_tree.position.distance_to(actor.position) < 10:
@@ -37,17 +37,3 @@ func perform(actor, delta) -> bool:
       actor.move_to(actor.position.direction_to(_closest_tree.position), delta)
 
   return false
-
-
-func _get_closest_tree(actor):
-  var trees = WorldState.get_elements("tree")
-  var closest_tree
-  var closest_distance = 10000000
-
-  for tree in trees:
-    var distance = actor.position.distance_to(tree.position)
-    if  distance < closest_distance:
-      closest_distance = distance
-      closest_tree = tree
-
-  return closest_tree

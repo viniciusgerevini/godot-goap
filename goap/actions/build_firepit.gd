@@ -25,7 +25,7 @@ func get_effects() -> Dictionary:
 
 
 func perform(actor, delta) -> bool:
-  var _closest_spot = _get_closest_firepit_spot(actor)
+  var _closest_spot = WorldState.get_closest_element("firepit_spot", actor)
 
   if _closest_spot == null:
     return false
@@ -40,18 +40,3 @@ func perform(actor, delta) -> bool:
   actor.move_to(actor.position.direction_to(_closest_spot.position), delta)
 
   return false
-
-
-func _get_closest_firepit_spot(actor):
-  var spots = WorldState.get_elements("firepit_spot")
-  var closest_firepit_spot
-  var closest_distance = 10000000
-
-  for spot in spots:
-    var distance = actor.position.distance_to(spot.position)
-    if  distance < closest_distance:
-      closest_distance = distance
-      closest_firepit_spot = spot
-
-  return closest_firepit_spot
-
