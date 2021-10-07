@@ -9,6 +9,7 @@ func _ready():
     CollectFromWoodStockAction.new(),
     CalmDownAction.new(),
     FindCoverAction.new(),
+    FindFoodAction.new(),
   ])
 
 

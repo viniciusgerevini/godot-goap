@@ -499,6 +499,7 @@ position = Vector2( 347, 106 )
 
 [node name="mushroom5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 329, 200 )
+nutrition = 10
 
 [node name="mushroom6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 187, 251 )
