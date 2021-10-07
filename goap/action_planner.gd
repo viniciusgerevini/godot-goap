@@ -26,7 +26,7 @@ func _find_best_plan(goal, desired_state, blackboard):
     "children": []
   }
 
-  if _build_plans(root):
+  if _build_plans(root, blackboard.duplicate()):
     var plans = _transform_tree_into_array(root, blackboard)
     var best_plan
     for p in plans:
@@ -55,8 +55,16 @@ func _transform_tree_into_array(p, blackboard):
   return plans
 
 
-func _build_plans(step):
+func _build_plans(step, blackboard):
   var has_followup = false
+
+  var state = step.state.duplicate()
+  for s in state:
+    if state[s] == blackboard.get(s):
+      state.erase(s)
+
+  if state.empty():
+    return true
 
   for action in _actions:
     if not action.is_valid():
@@ -64,7 +72,7 @@ func _build_plans(step):
 
     var should_use_action = false
     var effects = action.get_effects()
-    var desired_state = step.state.duplicate()
+    var desired_state = state.duplicate()
 
     for s in desired_state:
       if desired_state[s] == effects.get(s):
@@ -82,35 +90,11 @@ func _build_plans(step):
         "children": []
       }
 
-      if desired_state.empty() or _build_plans(s):
+      if desired_state.empty() or _build_plans(s, blackboard.duplicate()):
         step.children.push_back(s)
         has_followup = true
 
   return has_followup
-
-
-func _build_plan(desired_state, plan):
-  for action in _actions:
-    var should_use_action = false
-    var effects = action.get_effects()
-    var pre_conditions = action.get_preconditions()
-
-    for s in desired_state:
-      if desired_state[s] == effects.get(s):
-        desired_state.erase(s)
-        should_use_action = true
-
-    if should_use_action:
-      for p in pre_conditions:
-        desired_state[p] = pre_conditions[p]
-      plan.push_front(action)
-
-      if desired_state.empty():
-        return plan
-      else:
-        return _build_plan(desired_state, plan)
-
-  return []
 
 
 func _print_plan(plan):

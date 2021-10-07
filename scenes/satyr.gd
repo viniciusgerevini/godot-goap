@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var is_moving = false
+var is_attacking = false
 
 func _ready():
   var agent = GoapAgent.new()
@@ -18,13 +19,18 @@ func _process(delta):
   $labels/afraid_label.visible = WorldState.get_state("is_frightened", false)
   $labels/hungry_label.visible = WorldState.get_state("hunger", 0) >= 50
 
-  if not is_moving:
+  if is_attacking:
+    $body.play("attack")
+  elif is_moving:
+    is_moving = false
+  else:
     $body.play("idle")
-  is_moving = false
+
 
 
 func move_to(direction, delta):
   is_moving = true
+  is_attacking = false
   $body.play("run")
   if direction.x > 0:
     turn_right()
@@ -50,7 +56,9 @@ func turn_left():
 
 
 func chop_tree(tree):
-  return tree.chop()
+  var is_finished = tree.chop()
+  is_attacking = not is_finished
+  return is_finished
 
 
 func calm_down():

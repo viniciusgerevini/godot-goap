@@ -532,8 +532,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MarginContainer2" type="MarginContainer" parent="HUD/VBoxContainer"]
+margin_right = 480.0
+margin_bottom = 242.0
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+
+[node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer2"]
+margin_left = 415.0
+margin_top = 10.0
+margin_right = 470.0
+margin_bottom = 30.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Reload"
+
 [node name="MarginContainer" type="MarginContainer" parent="HUD/VBoxContainer"]
-margin_top = 240.0
+margin_top = 246.0
 margin_right = 480.0
 margin_bottom = 270.0
 custom_constants/margin_right = 10
@@ -543,30 +560,22 @@ custom_constants/margin_bottom = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/VBoxContainer/MarginContainer"]
 margin_left = 10.0
 margin_right = 470.0
-margin_bottom = 20.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="hunger_label" type="Label" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_top = 3.0
 margin_right = 46.0
-margin_bottom = 17.0
+margin_bottom = 14.0
 text = "Hunger"
 
 [node name="hunger" type="ProgressBar" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
 margin_left = 50.0
-margin_top = 3.0
 margin_right = 150.0
-margin_bottom = 17.0
+margin_bottom = 14.0
 rect_min_size = Vector2( 100, 0 )
 size_flags_vertical = 4
-
-[node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 154.0
-margin_right = 251.0
-margin_bottom = 20.0
-text = "Reload Scene"
 
 [node name="cover" parent="." instance=ExtResource( 9 )]
 position = Vector2( 108, 32 )
@@ -583,4 +592,4 @@ position = Vector2( 230, 230 )
 position = Vector2( 189.468, 165.449 )
 
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hanger_timer_timeout"]
-[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer2/reload" to="." method="_on_reload_pressed"]

@@ -24,3 +24,6 @@ texture = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -9 )
 shape = SubResource( 2 )
+
+[node name="chop_cooldown" type="Timer" parent="."]
+one_shot = true
