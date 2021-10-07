@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://sprites/troll_.png" type="Texture" id=1]
+[ext_resource path="res://scenes/troll.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 24, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 24, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 48, 24, 24 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 5.08686, 7.07948 )
+
+[node name="troll" type="KinematicBody2D" groups=[
+"troll",
+]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="body" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -12 )
+frames = SubResource( 9 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -7 )
+shape = SubResource( 10 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, -7 )
+enabled = true
+cast_to = Vector2( 10, 0 )
+collision_mask = 6
+
+[node name="rest_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="rest_timer" to="." method="_on_rest_timer_timeout"]

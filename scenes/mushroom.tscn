@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/forestDecoration_0.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 129.383, 17.4272, 7.61745, 10.3949 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.23322, 4.70181 )
+
+[node name="mushroom" type="StaticBody2D" groups=[
+"mushroom",
+]]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

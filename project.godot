@@ -1,0 +1,143 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "GoapAction",
+"class": "BuildFirepitAction",
+"language": "GDScript",
+"path": "res://goap/actions/build_firepit.gd"
+}, {
+"base": "GoapAction",
+"class": "CalmDownAction",
+"language": "GDScript",
+"path": "res://goap/actions/calm_down.gd"
+}, {
+"base": "GoapGoal",
+"class": "CalmDownGoal",
+"language": "GDScript",
+"path": "res://goap/goals/calm_down.gd"
+}, {
+"base": "GoapAction",
+"class": "ChopTreeAction",
+"language": "GDScript",
+"path": "res://goap/actions/chop_tree.gd"
+}, {
+"base": "GoapAction",
+"class": "CollectFromWoodStockAction",
+"language": "GDScript",
+"path": "res://goap/actions/collect_from_wood_stock.gd"
+}, {
+"base": "GoapAction",
+"class": "FindCoverAction",
+"language": "GDScript",
+"path": "res://goap/actions/find_cover.gd"
+}, {
+"base": "Node",
+"class": "GoapAction",
+"language": "GDScript",
+"path": "res://goap/action.gd"
+}, {
+"base": "Node",
+"class": "GoapActionPlanner",
+"language": "GDScript",
+"path": "res://goap/action_planner.gd"
+}, {
+"base": "Node",
+"class": "GoapAgent",
+"language": "GDScript",
+"path": "res://goap/agent.gd"
+}, {
+"base": "Node",
+"class": "GoapGoal",
+"language": "GDScript",
+"path": "res://goap/goal.gd"
+}, {
+"base": "GoapGoal",
+"class": "HasFirepitGoal",
+"language": "GDScript",
+"path": "res://goap/goals/has_firepit.gd"
+}, {
+"base": "GoapGoal",
+"class": "KeepFedGoal",
+"language": "GDScript",
+"path": "res://goap/goals/keep_fed.gd"
+}, {
+"base": "GoapGoal",
+"class": "RelaxGoal",
+"language": "GDScript",
+"path": "res://goap/goals/relax.gd"
+} ]
+_global_script_class_icons={
+"BuildFirepitAction": "",
+"CalmDownAction": "",
+"CalmDownGoal": "",
+"ChopTreeAction": "",
+"CollectFromWoodStockAction": "",
+"FindCoverAction": "",
+"GoapAction": "",
+"GoapActionPlanner": "",
+"GoapAgent": "",
+"GoapGoal": "",
+"HasFirepitGoal": "",
+"KeepFedGoal": "",
+"RelaxGoal": ""
+}
+
+[application]
+
+config/name="godot-goal-oriented-action-planning"
+run/main_scene="res://scenes/main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+WorldState="*res://world/world_state.gd"
+Goap="*res://goap/goap.gd"
+
+[display]
+
+window/size/width=480
+window/size/height=270
+window/size/test_width=1280
+window/size/test_height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep_width"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": true,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_clear_color=Color( 0.333333, 0.490196, 0.333333, 1 )
+environment/default_environment="res://default_env.tres"

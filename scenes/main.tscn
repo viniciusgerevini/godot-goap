@@ -1,0 +1,583 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://sprites/forest_.png" type="Texture" id=1]
+[ext_resource path="res://sprites/forestDecoration_0.png" type="Texture" id=2]
+[ext_resource path="res://scenes/troll.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/satyr.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/wood_stock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/mushroom.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/main.gd" type="Script" id=8]
+[ext_resource path="res://scenes/cover.tscn" type="PackedScene" id=9]
+
+[sub_resource type="TileSet" id=1]
+0/name = "forest_.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 352, 208, 208 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "forestDecoration_0.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 16, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "forestDecoration_0.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 16, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "forestDecoration_0.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 48, 16, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "forestDecoration_0.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 64, 16, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "forestDecoration_0.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 80, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "forestDecoration_0.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 96, 16, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "forestDecoration_0.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 112, 16, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "forestDecoration_0.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 128, 16, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "forestDecoration_0.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 144, 16, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "forestDecoration_0.png 9"
+9/texture = ExtResource( 2 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 64, 32, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "forestDecoration_0.png 10"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 80, 32, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "forestDecoration_0.png 11"
+11/texture = ExtResource( 2 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 96, 32, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "forestDecoration_0.png 12"
+12/texture = ExtResource( 2 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 112, 32, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "forestDecoration_0.png 13"
+13/texture = ExtResource( 2 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 128, 32, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "forestDecoration_0.png 14"
+14/texture = ExtResource( 2 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 144, 32, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "forestDecoration_0.png 15"
+15/texture = ExtResource( 2 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 16, 48, 16, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "forestDecoration_0.png 16"
+16/texture = ExtResource( 2 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 32, 48, 16, 32 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "forestDecoration_0.png 17"
+17/texture = ExtResource( 2 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 80, 48, 16, 32 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "forestDecoration_0.png 18"
+18/texture = ExtResource( 2 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 16, 80, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "forestDecoration_0.png 19"
+19/texture = ExtResource( 2 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 32, 80, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "forestDecoration_0.png 20"
+20/texture = ExtResource( 2 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 48, 80, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "forestDecoration_0.png 21"
+21/texture = ExtResource( 2 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 64, 80, 32, 32 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "forestDecoration_0.png 22"
+22/texture = ExtResource( 2 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 32, 112, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "forestDecoration_0.png 23"
+23/texture = ExtResource( 2 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 48, 96, 16, 32 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "forestDecoration_0.png 24"
+24/texture = ExtResource( 2 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 96, 112, 16, 16 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "forestDecoration_0.png 25"
+25/texture = ExtResource( 2 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 32, 128, 32, 32 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "forestDecoration_0.png 26"
+26/texture = ExtResource( 2 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 64, 128, 32, 32 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+
+[node name="main" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 524289, -65536, 0, 524289, -65535, 0, 524289, -65534, 0, 524289, -65533, 0, 524289, -65532, 0, 524289, -65531, 0, 524289, -65530, 0, 524289, -65529, 0, 524289, -65528, 0, 524289, -65527, 0, 524289, -65526, 0, 524289, -65525, 0, 524289, -65524, 0, 524289, -65523, 0, 524289, -65522, 0, 524289, -65521, 0, 524289, -65520, 0, 524289, -65519, 0, 524289, -65518, 0, 524289, -65517, 0, 524289, -65516, 0, 524289, -65515, 0, 524289, -65514, 0, 524289, -65513, 0, 524289, -65512, 0, 524289, -65511, 0, 524289, -65510, 0, 524289, -65509, 0, 524289, -65508, 0, 524289, -65507, 0, 524289, -65506, 0, 524289, 65535, 0, 524289, 0, 0, 458752, 1, 0, 458753, 2, 0, 458753, 3, 0, 458753, 4, 0, 458753, 5, 0, 458753, 6, 0, 458753, 7, 0, 458753, 8, 0, 458753, 9, 0, 458753, 10, 0, 458753, 11, 0, 458753, 12, 0, 458753, 13, 0, 458753, 14, 0, 458753, 15, 0, 458753, 16, 0, 458753, 17, 0, 458753, 18, 0, 458753, 19, 0, 458753, 20, 0, 458753, 21, 0, 458753, 22, 0, 458753, 23, 0, 458753, 24, 0, 458753, 25, 0, 458753, 26, 0, 458753, 27, 0, 458753, 28, 0, 458753, 29, 0, 458754, 30, 0, 524289, 131071, 0, 524289, 65536, 0, 720896, 65537, 0, 524289, 65538, 0, 524289, 65539, 0, 524289, 65540, 0, 524289, 65541, 0, 524289, 65542, 0, 524289, 65543, 0, 524289, 65544, 0, 524289, 65545, 0, 524289, 65546, 0, 524289, 65547, 0, 524289, 65548, 0, 524289, 65549, 0, 524289, 65550, 0, 524289, 65551, 0, 524289, 65552, 0, 524289, 65553, 0, 524289, 65554, 0, 524289, 65555, 0, 524289, 65556, 0, 524289, 65557, 0, 524289, 65558, 0, 524289, 65559, 0, 524289, 65560, 0, 524289, 65561, 0, 524289, 65562, 0, 524289, 65563, 0, 524289, 65564, 0, 524289, 65565, 0, 524290, 65566, 0, 524289, 196607, 0, 524289, 131072, 0, 720896, 131073, 0, 524289, 131074, 0, 524289, 131075, 0, 524289, 131076, 0, 524289, 131077, 0, 524289, 131078, 0, 524289, 131079, 0, 524289, 131080, 0, 524289, 131081, 0, 524289, 131082, 0, 524289, 131083, 0, 524289, 131084, 0, 524289, 131085, 0, 524289, 131086, 0, 524289, 131087, 0, 524289, 131088, 0, 524289, 131089, 0, 524289, 131090, 0, 524289, 131091, 0, 524289, 131092, 0, 524289, 131093, 0, 524289, 131094, 0, 524289, 131095, 0, 524289, 131096, 0, 524289, 131097, 0, 524289, 131098, 0, 524289, 131099, 0, 524289, 131100, 0, 524289, 131101, 0, 524290, 131102, 0, 524289, 262143, 0, 524289, 196608, 0, 720896, 196609, 0, 524289, 196610, 0, 524289, 196611, 0, 524289, 196612, 0, 524289, 196613, 0, 524289, 196614, 0, 524289, 196615, 0, 524289, 196616, 0, 524289, 196617, 0, 524289, 196618, 0, 524289, 196619, 0, 524289, 196620, 0, 524289, 196621, 0, 524289, 196622, 0, 524289, 196623, 0, 524289, 196624, 0, 524289, 196625, 0, 524289, 196626, 0, 524289, 196627, 0, 524289, 196628, 0, 524289, 196629, 0, 524289, 196630, 0, 524289, 196631, 0, 524289, 196632, 0, 524289, 196633, 0, 524289, 196634, 0, 524289, 196635, 0, 524289, 196636, 0, 524289, 196637, 0, 524290, 196638, 0, 524289, 327679, 0, 524289, 262144, 0, 720896, 262145, 0, 524289, 262146, 0, 524289, 262147, 0, 524289, 262148, 0, 524289, 262149, 0, 524289, 262150, 0, 524289, 262151, 0, 524289, 262152, 0, 524289, 262153, 0, 524289, 262154, 0, 524289, 262155, 0, 524289, 262156, 0, 524289, 262157, 0, 524289, 262158, 0, 524289, 262159, 0, 524289, 262160, 0, 524289, 262161, 0, 524289, 262162, 0, 524289, 262163, 0, 524289, 262164, 0, 524289, 262165, 0, 524289, 262166, 0, 524289, 262167, 0, 524289, 262168, 0, 524289, 262169, 0, 524289, 262170, 0, 524289, 262171, 0, 524289, 262172, 0, 524289, 262173, 0, 524290, 262174, 0, 524289, 393215, 0, 524289, 327680, 0, 720896, 327681, 0, 524289, 327682, 0, 524289, 327683, 0, 524289, 327684, 0, 524289, 327685, 0, 524289, 327686, 0, 524289, 327687, 0, 524289, 327688, 0, 524289, 327689, 0, 524289, 327690, 0, 524289, 327691, 0, 524289, 327692, 0, 524289, 327693, 0, 524289, 327694, 0, 524289, 327695, 0, 524289, 327696, 0, 524289, 327697, 0, 524289, 327698, 0, 524289, 327699, 0, 524289, 327700, 0, 524289, 327701, 0, 524289, 327702, 0, 524289, 327703, 0, 524289, 327704, 0, 524289, 327705, 0, 524289, 327706, 0, 524289, 327707, 0, 524289, 327708, 0, 524289, 327709, 0, 524290, 327710, 0, 524289, 458751, 0, 524289, 393216, 0, 720896, 393217, 0, 524289, 393218, 0, 524289, 393219, 0, 524289, 393220, 0, 524289, 393221, 0, 524289, 393222, 0, 524289, 393223, 0, 524289, 393224, 0, 524289, 393225, 0, 524289, 393226, 0, 524289, 393227, 0, 524289, 393228, 0, 524289, 393229, 0, 524289, 393230, 0, 524289, 393231, 0, 524289, 393232, 0, 524289, 393233, 0, 524289, 393234, 0, 524289, 393235, 0, 524289, 393236, 0, 524289, 393237, 0, 524289, 393238, 0, 524289, 393239, 0, 524289, 393240, 0, 524289, 393241, 0, 524289, 393242, 0, 524289, 393243, 0, 524289, 393244, 0, 524289, 393245, 0, 524290, 393246, 0, 524289, 524287, 0, 524289, 458752, 0, 720896, 458753, 0, 524289, 458754, 0, 524289, 458755, 0, 524289, 458756, 0, 524289, 458757, 0, 524289, 458758, 0, 524289, 458759, 0, 524289, 458760, 0, 524289, 458761, 0, 524289, 458762, 0, 524289, 458763, 0, 524289, 458764, 0, 524289, 458765, 0, 524289, 458766, 0, 524289, 458767, 0, 524289, 458768, 0, 524289, 458769, 0, 524289, 458770, 0, 524289, 458771, 0, 524289, 458772, 0, 524289, 458773, 0, 524289, 458774, 0, 524289, 458775, 0, 524289, 458776, 0, 524289, 458777, 0, 524289, 458778, 0, 524289, 458779, 0, 524289, 458780, 0, 524289, 458781, 0, 524290, 458782, 0, 524289, 589823, 0, 524289, 524288, 0, 720896, 524289, 0, 524289, 524290, 0, 524289, 524291, 0, 524289, 524292, 0, 524289, 524293, 0, 524289, 524294, 0, 524289, 524295, 0, 524289, 524296, 0, 524289, 524297, 0, 524289, 524298, 0, 524289, 524299, 0, 524289, 524300, 0, 524289, 524301, 0, 524289, 524302, 0, 524289, 524303, 0, 524289, 524304, 0, 524289, 524305, 0, 524289, 524306, 0, 524289, 524307, 0, 524289, 524308, 0, 524289, 524309, 0, 524289, 524310, 0, 524289, 524311, 0, 524289, 524312, 0, 524289, 524313, 0, 524289, 524314, 0, 524289, 524315, 0, 524289, 524316, 0, 524289, 524317, 0, 524290, 524318, 0, 524289, 655359, 0, 524289, 589824, 0, 720896, 589825, 0, 524289, 589826, 0, 524289, 589827, 0, 524289, 589828, 0, 524289, 589829, 0, 524289, 589830, 0, 524289, 589831, 0, 524289, 589832, 0, 524289, 589833, 0, 524289, 589834, 0, 524289, 589835, 0, 524289, 589836, 0, 524289, 589837, 0, 524289, 589838, 0, 524289, 589839, 0, 524289, 589840, 0, 524289, 589841, 0, 524289, 589842, 0, 524289, 589843, 0, 524289, 589844, 0, 524289, 589845, 0, 524289, 589846, 0, 524289, 589847, 0, 524289, 589848, 0, 524289, 589849, 0, 524289, 589850, 0, 524289, 589851, 0, 524289, 589852, 0, 524289, 589853, 0, 524290, 589854, 0, 524289, 720895, 0, 524289, 655360, 0, 720896, 655361, 0, 524289, 655362, 0, 524289, 655363, 0, 524289, 655364, 0, 524289, 655365, 0, 524289, 655366, 0, 524289, 655367, 0, 524289, 655368, 0, 524289, 655369, 0, 524289, 655370, 0, 524289, 655371, 0, 524289, 655372, 0, 524289, 655373, 0, 524289, 655374, 0, 524289, 655375, 0, 524289, 655376, 0, 524289, 655377, 0, 524289, 655378, 0, 524289, 655379, 0, 524289, 655380, 0, 524289, 655381, 0, 524289, 655382, 0, 524289, 655383, 0, 524289, 655384, 0, 524289, 655385, 0, 524289, 655386, 0, 524289, 655387, 0, 524289, 655388, 0, 524289, 655389, 0, 524290, 655390, 0, 524289, 786431, 0, 524289, 720896, 0, 720896, 720897, 0, 524289, 720898, 0, 524289, 720899, 0, 524289, 720900, 0, 524289, 720901, 0, 524289, 720902, 0, 524289, 720903, 0, 524289, 720904, 0, 524289, 720905, 0, 524289, 720906, 0, 524289, 720907, 0, 524289, 720908, 0, 524289, 720909, 0, 524289, 720910, 0, 524289, 720911, 0, 524289, 720912, 0, 524289, 720913, 0, 524289, 720914, 0, 524289, 720915, 0, 524289, 720916, 0, 524289, 720917, 0, 524289, 720918, 0, 524289, 720919, 0, 524289, 720920, 0, 524289, 720921, 0, 524289, 720922, 0, 524289, 720923, 0, 524289, 720924, 0, 524289, 720925, 0, 524290, 720926, 0, 524289, 851967, 0, 524289, 786432, 0, 720896, 786433, 0, 524289, 786434, 0, 524289, 786435, 0, 524289, 786436, 0, 524289, 786437, 0, 0, 786438, 0, 1, 786439, 0, 2, 786440, 0, 524289, 786441, 0, 524289, 786442, 0, 524289, 786443, 0, 524289, 786444, 0, 524289, 786445, 0, 524289, 786446, 0, 524289, 786447, 0, 524289, 786448, 0, 524289, 786449, 0, 524289, 786450, 0, 524289, 786451, 0, 524289, 786452, 0, 524289, 786453, 0, 524289, 786454, 0, 524289, 786455, 0, 524289, 786456, 0, 524289, 786457, 0, 524289, 786458, 0, 524289, 786459, 0, 524289, 786460, 0, 524289, 786461, 0, 524290, 786462, 0, 524289, 917503, 0, 524289, 851968, 0, 720896, 851969, 0, 524289, 851970, 0, 524289, 851971, 0, 524289, 851972, 0, 524289, 851973, 0, 65536, 851974, 0, 65537, 851975, 0, 262145, 851976, 0, 524289, 851977, 0, 524289, 851978, 0, 524289, 851979, 0, 524289, 851980, 0, 524289, 851981, 0, 524289, 851982, 0, 524289, 851983, 0, 524289, 851984, 0, 524289, 851985, 0, 524289, 851986, 0, 524289, 851987, 0, 524289, 851988, 0, 524289, 851989, 0, 524289, 851990, 0, 524289, 851991, 0, 524289, 851992, 0, 524289, 851993, 0, 524289, 851994, 0, 524289, 851995, 0, 524289, 851996, 0, 524289, 851997, 0, 524290, 851998, 0, 524289, 983039, 0, 524289, 917504, 0, 720896, 917505, 0, 524289, 917506, 0, 524289, 917507, 0, 524289, 917508, 0, 524289, 917509, 0, 131072, 917510, 0, 131073, 917511, 0, 131074, 917512, 0, 524289, 917513, 0, 524289, 917514, 0, 524289, 917515, 0, 524289, 917516, 0, 524289, 917517, 0, 524289, 917518, 0, 524289, 917519, 0, 524289, 917520, 0, 524289, 917521, 0, 524289, 917522, 0, 524289, 917523, 0, 524289, 917524, 0, 524289, 917525, 0, 524289, 917526, 0, 524289, 917527, 0, 524289, 917528, 0, 524289, 917529, 0, 524289, 917530, 0, 524289, 917531, 0, 524289, 917532, 0, 524289, 917533, 0, 524290, 917534, 0, 524289, 1048575, 0, 524289, 983040, 0, 720896, 983041, 0, 524289, 983042, 0, 524289, 983043, 0, 524289, 983044, 0, 524289, 983045, 0, 524289, 983046, 0, 524289, 983047, 0, 524289, 983048, 0, 524289, 983049, 0, 524289, 983050, 0, 524289, 983051, 0, 524289, 983052, 0, 524289, 983053, 0, 524289, 983054, 0, 524289, 983055, 0, 524289, 983056, 0, 524289, 983057, 0, 524289, 983058, 0, 524289, 983059, 0, 524289, 983060, 0, 524289, 983061, 0, 524289, 983062, 0, 524289, 983063, 0, 524289, 983064, 0, 524289, 983065, 0, 524289, 983066, 0, 524289, 983067, 0, 524289, 983068, 0, 524289, 983069, 0, 524290, 983070, 0, 524289, 1114111, 0, 524289, 1048576, 0, 589824, 1048577, 0, 589825, 1048578, 0, 589825, 1048579, 0, 589825, 1048580, 0, 589825, 1048581, 0, 589825, 1048582, 0, 589825, 1048583, 0, 589825, 1048584, 0, 589825, 1048585, 0, 589825, 1048586, 0, 589825, 1048587, 0, 589825, 1048588, 0, 589825, 1048589, 0, 589825, 1048590, 0, 589825, 1048591, 0, 589825, 1048592, 0, 589825, 1048593, 0, 589825, 1048594, 0, 589825, 1048595, 0, 589825, 1048596, 0, 589825, 1048597, 0, 589825, 1048598, 0, 589825, 1048599, 0, 589825, 1048600, 0, 589825, 1048601, 0, 589825, 1048602, 0, 589825, 1048603, 0, 589825, 1048604, 0, 589825, 1048605, 0, 589826, 1048606, 0, 524289, 1179647, 0, 524289, 1114112, 0, 524289, 1114113, 0, 524289, 1114114, 0, 524289, 1114115, 0, 524289, 1114116, 0, 524289, 1114117, 0, 524289, 1114118, 0, 524289, 1114119, 0, 524289, 1114120, 0, 524289, 1114121, 0, 524289, 1114122, 0, 524289, 1114123, 0, 524289, 1114124, 0, 524289, 1114125, 0, 524289, 1114126, 0, 524289, 1114127, 0, 524289, 1114128, 0, 524289, 1114129, 0, 524289, 1114130, 0, 524289, 1114131, 0, 524289, 1114132, 0, 524289, 1114133, 0, 524289, 1114134, 0, 524289, 1114135, 0, 524289, 1114136, 0, 524289, 1114137, 0, 524289, 1114138, 0, 524289, 1114139, 0, 524289, 1114140, 0, 524289, 1114141, 0, 524289, 1114142, 0, 524289 )
+
+[node name="decoration" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65531, 16, 0, -65530, 16, 0, 65537, 9, 0, 65545, 2, 0, 65552, 10, 0, 65560, 0, 0, 65561, 0, 0, 131074, 10, 0, 131090, 9, 0, 131096, 6, 0, 196630, 3, 0, 196634, 0, 0, 196635, 0, 0, 262157, 4, 0, 262168, 20, 0, 327686, 3, 0, 327693, 3, 0, 327703, 12, 0, 327704, 11, 0, 327706, 2, 0, 393217, 21, 0, 393226, 2, 0, 393243, 21, 0, 458755, 3, 0, 524303, 4, 0, 524305, 3, 0, 524312, 3, 0, 524315, 2, 0, 720897, 21, 0, 720923, 21, 0, 786445, 3, 0, 786449, 3, 0, 851993, 4, 0, 917506, 3, 0, 917526, 10, 0, 917532, 19, 0, 983051, 3, 0, 983062, 4, 0, 983067, 20, 0 )
+
+[node name="tree" parent="." instance=ExtResource( 5 )]
+position = Vector2( 159, 62 )
+
+[node name="tree2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 175, 59 )
+
+[node name="tree3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 188, 65 )
+
+[node name="tree4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 308, 99 )
+
+[node name="tree5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 291, 99 )
+
+[node name="tree6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 276, 87 )
+
+[node name="tree7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 282, 220 )
+
+[node name="tree8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 297, 221 )
+
+[node name="tree9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 289, 240 )
+
+[node name="tree10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 94, 158 )
+
+[node name="tree11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 107, 158 )
+
+[node name="tree12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 100, 170 )
+
+[node name="tree13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 49, 79 )
+
+[node name="tree14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 42, 84 )
+
+[node name="tree15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 55, 84 )
+
+[node name="wood_stock" parent="." instance=ExtResource( 6 )]
+position = Vector2( 151, 109 )
+
+[node name="wood_stock2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 167, 109 )
+
+[node name="wood_stock3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 160, 95 )
+
+[node name="mushroom" parent="." instance=ExtResource( 7 )]
+position = Vector2( 138, 26 )
+
+[node name="mushroom2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 158, 26 )
+
+[node name="mushroom3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 247, 65 )
+
+[node name="mushroom4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 368, 178 )
+
+[node name="mushroom7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 347, 106 )
+
+[node name="mushroom5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 329, 200 )
+
+[node name="mushroom6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 187, 251 )
+
+[node name="satyr" parent="." instance=ExtResource( 4 )]
+position = Vector2( 165.003, 153.876 )
+
+[node name="troll" parent="." instance=ExtResource( 3 )]
+position = Vector2( 72, 33 )
+
+[node name="hunger_timer" type="Timer" parent="."]
+autostart = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/VBoxContainer"]
+margin_top = 240.0
+margin_right = 480.0
+margin_bottom = 270.0
+custom_constants/margin_right = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/VBoxContainer/MarginContainer"]
+margin_left = 10.0
+margin_right = 470.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hunger_label" type="Label" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 46.0
+margin_bottom = 17.0
+text = "Hunger"
+
+[node name="hunger" type="ProgressBar" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 50.0
+margin_top = 3.0
+margin_right = 150.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_vertical = 4
+
+[node name="toggle_hunger" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 154.0
+margin_right = 255.0
+margin_bottom = 20.0
+text = "Toggle hunger"
+
+[node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 259.0
+margin_right = 356.0
+margin_bottom = 20.0
+text = "Reload Scene"
+
+[node name="cover" parent="." instance=ExtResource( 9 )]
+position = Vector2( 108, 32 )
+
+[node name="cover2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 400, 145 )
+
+[node name="cover3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 230, 230 )
+
+[node name="firepit_spot" type="Position2D" parent="." groups=[
+"firepit_spot",
+]]
+position = Vector2( 189.468, 165.449 )
+
+[connection signal="timeout" from="hunger_timer" to="." method="_on_hanger_timer_timeout"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/toggle_hunger" to="." method="_on_toggle_hunger_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/reload" to="." method="_on_reload_pressed"]
