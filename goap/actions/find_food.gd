@@ -6,7 +6,7 @@ class_name FindFoodAction
 func get_class(): return "FindFoodAction"
 
 
-func get_cost() -> int:
+func get_cost(_blackboard) -> int:
   return 1
 
 

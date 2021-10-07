@@ -6,7 +6,7 @@ class_name CalmDownAction
 func get_class(): return "CalmDownAction"
 
 
-func get_cost() -> int:
+func get_cost(_blackboard) -> int:
   return 1
 
 

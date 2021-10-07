@@ -482,6 +482,15 @@ position = Vector2( 167, 109 )
 [node name="wood_stock3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 160, 95 )
 
+[node name="wood_stock4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 332, 151 )
+
+[node name="wood_stock5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 157, 217 )
+
+[node name="wood_stock6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 422, 217 )
+
 [node name="mushroom" parent="." instance=ExtResource( 7 )]
 position = Vector2( 138, 26 )
 

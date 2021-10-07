@@ -9,17 +9,17 @@ func set_actions(actions: Array):
   _actions = actions
 
 
-func get_plan(goal: GoapGoal) -> Array:
+func get_plan(goal: GoapGoal, blackboard = {}) -> Array:
   print("Goal: %s" % goal.get_class())
   var desired_state = goal.get_desired_state().duplicate()
 
   if desired_state.empty():
     return []
 
-  return _find_best_plan(goal, desired_state)
+  return _find_best_plan(goal, desired_state, blackboard)
 
 
-func _find_best_plan(goal, desired_state):
+func _find_best_plan(goal, desired_state, blackboard):
   var root = {
     "action": goal,
     "state": desired_state,
@@ -27,7 +27,7 @@ func _find_best_plan(goal, desired_state):
   }
 
   if _build_plans(root):
-    var plans = _transform_tree_into_array(root)
+    var plans = _transform_tree_into_array(root, blackboard)
     var best_plan
     for p in plans:
       _print_plan(p)
@@ -38,18 +38,18 @@ func _find_best_plan(goal, desired_state):
   return []
 
 
-func _transform_tree_into_array(p):
+func _transform_tree_into_array(p, blackboard):
   var plans = []
 
   if p.children.size() == 0:
-    plans.push_back({ "actions": [p.action], "cost": p.action.get_cost() })
+    plans.push_back({ "actions": [p.action], "cost": p.action.get_cost(blackboard) })
     return plans
 
   for c in p.children:
-    for child_plan in _transform_tree_into_array(c):
+    for child_plan in _transform_tree_into_array(c, blackboard):
       if p.action.has_method("get_cost"):
         child_plan.actions.push_back(p.action)
-        child_plan.cost += p.action.get_cost()
+        child_plan.cost += p.action.get_cost(blackboard)
       plans.push_back(child_plan)
 
   return plans

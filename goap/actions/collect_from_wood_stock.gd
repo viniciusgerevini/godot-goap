@@ -9,7 +9,10 @@ func is_valid() -> bool:
   return WorldState.get_elements("wood_stock").size() > 0
 
 
-func get_cost() -> int:
+func get_cost(blackboard) -> int:
+  if blackboard.has("position"):
+    var closest_tree = WorldState.get_closest_element("wood_stock", blackboard)
+    return int(closest_tree.position.distance_to(blackboard.position) / 5)
   return 5
 
 

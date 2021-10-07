@@ -6,7 +6,7 @@ class_name FindCoverAction
 func get_class(): return "FindCoverAction"
 
 
-func get_cost() -> int:
+func get_cost(_blackboard) -> int:
   return 1
 
 

@@ -12,8 +12,11 @@ var _actor
 func _process(delta):
   var goal = _get_best_goal()
   if _current_goal == null or goal != _current_goal:
+    var blackboard = {
+      "position": _actor.position
+     }
     _current_goal = goal
-    _current_plan = Goap.get_action_planner().get_plan(_current_goal)
+    _current_plan = Goap.get_action_planner().get_plan(_current_goal, blackboard)
     _current_plan_step = 0
   else:
     _follow_plan(_current_plan, delta)

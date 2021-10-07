@@ -8,7 +8,7 @@ const Firepit = preload("res://scenes/firepit.tscn")
 func get_class(): return "BuildFirepitAction"
 
 
-func get_cost() -> int:
+func get_cost(_blackboard) -> int:
   return 1
 
 
