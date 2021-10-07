@@ -553,15 +553,9 @@ margin_bottom = 17.0
 rect_min_size = Vector2( 100, 0 )
 size_flags_vertical = 4
 
-[node name="toggle_hunger" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 154.0
-margin_right = 255.0
-margin_bottom = 20.0
-text = "Toggle hunger"
-
 [node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 259.0
-margin_right = 356.0
+margin_left = 154.0
+margin_right = 251.0
 margin_bottom = 20.0
 text = "Reload Scene"
 
@@ -580,5 +574,4 @@ position = Vector2( 230, 230 )
 position = Vector2( 189.468, 165.449 )
 
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hanger_timer_timeout"]
-[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/toggle_hunger" to="." method="_on_toggle_hunger_pressed"]
 [connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/reload" to="." method="_on_reload_pressed"]

@@ -11,12 +11,16 @@ func get_cost() -> int:
 
 
 func get_preconditions() -> Dictionary:
-  return {}
+  return {
+    "protected": true
+  }
 
 
 func get_effects() -> Dictionary:
-  return {}
+  return {
+    "is_frightened": false
+  }
 
 
 func perform(actor, delta) -> bool:
-  return false
+  return actor.calm_down()

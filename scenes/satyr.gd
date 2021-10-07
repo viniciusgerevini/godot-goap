@@ -15,6 +15,9 @@ func _ready():
 
 
 func _process(delta):
+  $labels/afraid_label.visible = WorldState.get_state("is_frightened", false)
+  $labels/hungry_label.visible = WorldState.get_state("hunger", 0) >= 50
+
   if not is_moving:
     $body.play("idle")
   is_moving = false
@@ -37,7 +40,6 @@ func turn_right():
     return
 
   $body.flip_h = false
-  $RayCast2D.cast_to *= -1
 
 
 func turn_left():
@@ -45,8 +47,26 @@ func turn_left():
     return
 
   $body.flip_h = true
-  $RayCast2D.cast_to *= -1
 
 
 func chop_tree(tree):
   return tree.chop()
+
+
+func calm_down():
+  if WorldState.get_state("is_frightened") == false:
+    return true
+
+  if $calm_down_timer.is_stopped():
+    $calm_down_timer.start()
+
+  return false
+
+
+func _on_detection_radius_body_entered(body):
+  if body.is_in_group("troll"):
+    WorldState.set_state("is_frightened", true)
+
+
+func _on_calm_down_timer_timeout():
+  WorldState.set_state("is_frightened", false)
