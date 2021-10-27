@@ -1,12 +1,28 @@
+#
+# This NPC uses GOAP as AI. This script handles
+# Only NPC related stuff, like moving and animations.
+
+# All AI related code is inside GoapAgent.
+#
+# This is optional, but I usually like to have my AI code
+# separated from the "dumb" modules that handle the basic low
+# level stuff, this allows me to use the same Agent in different
+# nodes.
+#
 extends KinematicBody2D
 
 var is_moving = false
 var is_attacking = false
 
 func _ready():
+  # Here is where I define which goals are available for this
+  # npc. In this implementation, goals priority are calculated
+  # dynamically. Depending on your use case you might want to
+  # have a way to define different goal priorities depending on
+  # npc.
   var agent = GoapAgent.new()
   agent.init(self, [
-    HasFirepitGoal.new(),
+    KeepFirepitBurningGoal.new(),
     KeepFedGoal.new(),
     CalmDownGoal.new(),
     RelaxGoal.new()

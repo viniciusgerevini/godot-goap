@@ -1,8 +1,8 @@
 extends GoapGoal
 
-class_name HasFirepitGoal
+class_name KeepFirepitBurningGoal
 
-func get_class(): return "HasFirepitGoal"
+func get_class(): return "KeepFirepitBurningGoal"
 
 
 func is_valid() -> bool:
