@@ -32,8 +32,8 @@ func _ready():
 
 
 func _process(_delta):
-  $labels/afraid_label.visible = WorldState.get_state("is_frightened", false)
-  $labels/hungry_label.visible = WorldState.get_state("hunger", 0) >= 50
+  $labels/labels/afraid_label.visible = WorldState.get_state("is_frightened", false)
+  $labels/labels/hungry_label.visible = WorldState.get_state("hunger", 0) >= 50
 
   if is_attacking:
     $body.play("attack")

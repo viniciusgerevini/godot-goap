@@ -32,3 +32,9 @@ func get_closest_element(group_name, reference):
       closest_element = element
 
   return closest_element
+
+
+func console_message(object):
+  var console = get_tree().get_nodes_in_group("console")[0] as TextEdit
+  console.text += "%s\n" % str(object)
+  console.cursor_set_line(console.get_line_count())

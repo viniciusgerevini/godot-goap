@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://sprites/forest_.png" type="Texture" id=1]
 [ext_resource path="res://sprites/forestDecoration_0.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/mushroom.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/main.gd" type="Script" id=8]
 [ext_resource path="res://scenes/cover.tscn" type="PackedScene" id=9]
+[ext_resource path="res://fonts/main.tres" type="DynamicFont" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "forest_.png 0"
@@ -413,6 +414,46 @@
 26/shapes = [  ]
 26/z_index = 0
 
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.266667, 0.266667, 0.313726, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 3.0
+bg_color = Color( 0.207843, 0.207843, 0.25098, 0.87451 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 3.0
+bg_color = Color( 0.207843, 0.207843, 0.25098, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0.207843, 0.207843, 0.25098, 1 )
+
 [node name="main" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -532,25 +573,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer2" type="MarginContainer" parent="HUD/VBoxContainer"]
-margin_right = 480.0
-margin_bottom = 242.0
-size_flags_vertical = 3
-custom_constants/margin_right = 10
-custom_constants/margin_top = 10
-custom_constants/margin_left = 10
-
-[node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer2"]
-margin_left = 415.0
-margin_top = 10.0
-margin_right = 470.0
-margin_bottom = 30.0
-size_flags_horizontal = 8
-size_flags_vertical = 0
-text = "Reload"
-
 [node name="MarginContainer" type="MarginContainer" parent="HUD/VBoxContainer"]
-margin_top = 246.0
+margin_top = 244.0
 margin_right = 480.0
 margin_bottom = 270.0
 custom_constants/margin_right = 10
@@ -560,22 +584,93 @@ custom_constants/margin_bottom = 10
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/VBoxContainer/MarginContainer"]
 margin_left = 10.0
 margin_right = 470.0
-margin_bottom = 14.0
+margin_bottom = 16.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="hunger_label" type="Label" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_right = 46.0
-margin_bottom = 14.0
+margin_top = 4.0
+margin_right = 48.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 10 )
 text = "Hunger"
 
 [node name="hunger" type="ProgressBar" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 50.0
-margin_right = 150.0
-margin_bottom = 14.0
+margin_left = 52.0
+margin_top = 4.0
+margin_right = 152.0
+margin_bottom = 12.0
 rect_min_size = Vector2( 100, 0 )
 size_flags_vertical = 4
+custom_fonts/font = ExtResource( 10 )
+
+[node name="reload" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 156.0
+margin_right = 224.0
+margin_bottom = 16.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 10 )
+text = "Reload"
+
+[node name="pause" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+pause_mode = 2
+margin_left = 228.0
+margin_right = 288.0
+margin_bottom = 16.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 10 )
+text = "Pause"
+
+[node name="console" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
+pause_mode = 2
+margin_left = 292.0
+margin_right = 408.0
+margin_bottom = 16.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 10 )
+text = "Show Console"
+
+[node name="console_container" type="MarginContainer" parent="HUD"]
+anchor_right = 1.0
+margin_bottom = 60.0
+grow_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="HUD/console_container" groups=[
+"console",
+]]
+pause_mode = 2
+visible = false
+modulate = Color( 1, 1, 1, 0.752941 )
+margin_right = 480.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 150, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_styles/read_only = SubResource( 7 )
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+readonly = true
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+smooth_scrolling = true
+wrap_enabled = true
 
 [node name="cover" parent="." instance=ExtResource( 9 )]
 position = Vector2( 108, 32 )
@@ -592,4 +687,6 @@ position = Vector2( 230, 230 )
 position = Vector2( 189.468, 165.449 )
 
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hanger_timer_timeout"]
-[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer2/reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/MarginContainer/HBoxContainer/console" to="." method="_on_console_pressed"]

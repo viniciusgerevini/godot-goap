@@ -22,6 +22,7 @@ func set_actions(actions: Array):
 #
 func get_plan(goal: GoapGoal, blackboard = {}) -> Array:
   print("Goal: %s" % goal.get_class())
+  WorldState.console_message("Goal: %s" % goal.get_class())
   var desired_state = goal.get_desired_state().duplicate()
 
   if desired_state.empty():
@@ -165,3 +166,4 @@ func _print_plan(plan):
   for a in plan.actions:
     actions.push_back(a.get_class())
   print({"cost": plan.cost, "actions": actions})
+  WorldState.console_message({"cost": plan.cost, "actions": actions})
