@@ -22,5 +22,5 @@ func get_effects() -> Dictionary:
   }
 
 
-func perform(actor, delta) -> bool:
+func perform(actor, _delta) -> bool:
   return actor.calm_down()

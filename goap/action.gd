@@ -62,5 +62,5 @@ func get_effects() -> Dictionary:
 # or even let your NPC decide how to handle the action. In other words,
 # your NPC could just receive the action name and decide what to do.
 #
-func perform(actor, delta) -> bool:
+func perform(_actor, _delta) -> bool:
   return false

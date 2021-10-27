@@ -14,4 +14,5 @@ func _on_hanger_timer_timeout():
 
 func _on_reload_pressed():
   WorldState.clear_state()
+  # warning-ignore:return_value_discarded
   self.get_tree().reload_current_scene()

@@ -31,7 +31,7 @@ func _ready():
   add_child(agent)
 
 
-func _process(delta):
+func _process(_delta):
   $labels/afraid_label.visible = WorldState.get_state("is_frightened", false)
   $labels/hungry_label.visible = WorldState.get_state("hunger", 0) >= 50
 
@@ -53,6 +53,7 @@ func move_to(direction, delta):
   else:
     turn_left()
 
+  # warning-ignore:return_value_discarded
   move_and_collide(direction * delta * 100)
 
 

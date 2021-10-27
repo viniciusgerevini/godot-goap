@@ -19,6 +19,7 @@ func _process(delta):
     else:
       turn_left()
 
+    # warning-ignore:return_value_discarded
     move_and_collide(direction * delta * 100)
   else:
     $body.play("idle")
