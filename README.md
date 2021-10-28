@@ -2,13 +2,13 @@
 
 ![Screenshot](./screenshot.png)
 
-This is the GOAP example implemented for [https://youtu.be/LhnlNKWh7oc](this video). If you have any comments and suggestion that video's comments section may
+This is the GOAP example implemented for [this video](https://youtu.be/LhnlNKWh7oc). If you have any comments and suggestion that video's comments section may
 be the best place for them.
 
 This is a personal experiment not tested in high load scenarios.
 The code is fully documented to explain the reasoning behind the implementation.
 
-You can find a live demo [https://viniciusgerevini.github.io/godot-goap](here).
+You can find a live demo [here](https://viniciusgerevini.github.io/godot-goap).
 
 
 ## What the example does
@@ -44,12 +44,12 @@ Check the scripts for comments with contextual information.
 
 ## Can I use this in my project?
 
+I only own the code, assets are from [analogstudios_](https://analogstudios.itch.io/).
+
 Feel free to use this code as you see fit. Keep in mind this is an experiment and many edge cases are not being handled. Some are commented in the code,
 some others I might not have thought of. Also, I haven't tested it in stress situations.
 
 There is no need for attribution. Anyway, in case you do something cool with it, let me know. I'd love to see it.
 
-If you like this kind of content you might like my [http://youtube.com/c/ThisIsVini](youtube channel) or my [https://twitter.com/vini_gerevini](Twitter).
-
-
+If you like this kind of content you might like my [youtube channel](http://youtube.com/c/ThisIsVini) or my [Twitter](https://twitter.com/vini_gerevini).
 
