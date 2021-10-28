@@ -2,7 +2,7 @@
 
 ![Screenshot](./screenshot.png)
 
-This is the GOAP example implemented for [https://youtu.be/6e-vktk3aO0](this video). If you have any comments and suggestion that video's comments section may
+This is the GOAP example implemented for [https://youtu.be/LhnlNKWh7oc](this video). If you have any comments and suggestion that video's comments section may
 be the best place for them.
 
 This is a personal experiment not tested in high load scenarios.
