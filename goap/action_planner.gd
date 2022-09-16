@@ -85,7 +85,7 @@ func _build_plans(step, blackboard):
   var state = step.state.duplicate()
   # checks if the blackboard contains data that can
   # satisfy the current state.
-  for s in state:
+  for s in step.state:
     if state[s] == blackboard.get(s):
       state.erase(s)
 
