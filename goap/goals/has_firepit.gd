@@ -6,14 +6,14 @@ func get_class(): return "KeepFirepitBurningGoal"
 
 
 func is_valid() -> bool:
-  return WorldState.get_elements("firepit").size() == 0
+	return WorldState.get_elements("firepit").size() == 0
 
 
 func priority() -> int:
-  return 1
+	return 1
 
 
 func get_desired_state() -> Dictionary:
-  return {
-    "has_firepit": true
-  }
+	return {
+		"has_firepit": true
+	}

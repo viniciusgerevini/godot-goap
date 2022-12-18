@@ -611,10 +611,10 @@ margin_right = 224.0
 margin_bottom = 16.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+custom_fonts/font = ExtResource( 10 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 10 )
 text = "Reload"
 
 [node name="pause" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
@@ -624,10 +624,10 @@ margin_right = 288.0
 margin_bottom = 16.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+custom_fonts/font = ExtResource( 10 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 10 )
 text = "Pause"
 
 [node name="console" type="Button" parent="HUD/VBoxContainer/MarginContainer/HBoxContainer"]
@@ -637,10 +637,10 @@ margin_right = 408.0
 margin_bottom = 16.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+custom_fonts/font = ExtResource( 10 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 10 )
 text = "Show Console"
 
 [node name="console_container" type="MarginContainer" parent="HUD"]
@@ -652,9 +652,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="HUD/console_container" groups=[
-"console",
-]]
+[node name="TextEdit" type="TextEdit" parent="HUD/console_container" groups=["console"]]
 pause_mode = 2
 visible = false
 modulate = Color( 1, 1, 1, 0.752941 )
@@ -663,9 +661,9 @@ margin_bottom = 50.0
 rect_min_size = Vector2( 150, 50 )
 size_flags_horizontal = 3
 size_flags_vertical = 0
-custom_styles/read_only = SubResource( 7 )
-custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 10 )
+custom_styles/read_only = SubResource( 7 )
 readonly = true
 shortcut_keys_enabled = false
 virtual_keyboard_enabled = false
@@ -681,9 +679,7 @@ position = Vector2( 400, 145 )
 [node name="cover3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 230, 230 )
 
-[node name="firepit_spot" type="Position2D" parent="." groups=[
-"firepit_spot",
-]]
+[node name="firepit_spot" type="Position2D" parent="." groups=["firepit_spot"]]
 position = Vector2( 189.468, 165.449 )
 
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hanger_timer_timeout"]

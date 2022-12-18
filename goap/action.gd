@@ -14,7 +14,7 @@ class_name GoapAction
 # does not allow this action anymore.
 #
 func is_valid() -> bool:
-  return true
+	return true
 
 
 #
@@ -24,7 +24,7 @@ func is_valid() -> bool:
 # Check "./actions/chop_tree.gd" for a situational cost example.
 #
 func get_cost(_blackboard) -> int:
-  return 1000
+	return 1000
 
 #
 # Action requirements.
@@ -34,7 +34,7 @@ func get_cost(_blackboard) -> int:
 # }
 #
 func get_preconditions() -> Dictionary:
-  return {}
+	return {}
 
 
 #
@@ -45,7 +45,7 @@ func get_preconditions() -> Dictionary:
 #   "has_wood": true
 # }
 func get_effects() -> Dictionary:
-  return {}
+	return {}
 
 
 #
@@ -63,4 +63,4 @@ func get_effects() -> Dictionary:
 # your NPC could just receive the action name and decide what to do.
 #
 func perform(_actor, _delta) -> bool:
-  return false
+	return false
