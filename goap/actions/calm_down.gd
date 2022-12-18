@@ -7,20 +7,20 @@ func get_class(): return "CalmDownAction"
 
 
 func get_cost(_blackboard) -> int:
-  return 1
+	return 1
 
 
 func get_preconditions() -> Dictionary:
-  return {
-    "protected": true
-  }
+	return {
+		"protected": true
+	}
 
 
 func get_effects() -> Dictionary:
-  return {
-    "is_frightened": false
-  }
+	return {
+		"is_frightened": false
+	}
 
 
 func perform(actor, _delta) -> bool:
-  return actor.calm_down()
+	return actor.calm_down()
