@@ -9,7 +9,7 @@
 # level stuff, this allows me to use the same Agent in different
 # nodes.
 #
-extends KinematicBody2D
+extends CharacterBody2D
 
 var is_moving = false
 var is_attacking = false

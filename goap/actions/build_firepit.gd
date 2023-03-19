@@ -5,7 +5,7 @@ class_name BuildFirepitAction
 const Firepit = preload("res://scenes/firepit.tscn")
 
 
-func get_class(): return "BuildFirepitAction"
+func get_clazz(): return "BuildFirepitAction"
 
 
 func get_cost(_blackboard) -> int:
@@ -31,7 +31,7 @@ func perform(actor, delta) -> bool:
 		return false
 
 	if _closest_spot.position.distance_to(actor.position) < 20:
-			var firepit = Firepit.instance()
+			var firepit = Firepit.instantiate()
 			actor.get_parent().add_child(firepit)
 			firepit.position = _closest_spot.position
 			firepit.z_index = _closest_spot.z_index

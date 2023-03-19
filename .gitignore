@@ -1,4 +1,5 @@
 # Godot-specific ignores
+.godot
 .import/
 */*.import
 output/

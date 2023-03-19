@@ -3,7 +3,7 @@ extends GoapAction
 class_name CalmDownAction
 
 
-func get_class(): return "CalmDownAction"
+func get_clazz(): return "CalmDownAction"
 
 
 func get_cost(_blackboard) -> int:

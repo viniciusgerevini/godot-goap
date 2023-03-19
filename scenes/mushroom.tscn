@@ -1,24 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://b1xnqbmsxtk2j"]
 
-[ext_resource path="res://sprites/forestDecoration_0.png" type="Texture" id=1]
-[ext_resource path="res://scenes/mushroom.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://b153nqpuv83gr" path="res://sprites/forestDecoration_0.png" id="1"]
+[ext_resource type="Script" path="res://scenes/mushroom.gd" id="2"]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
-region = Rect2( 129.383, 17.4272, 7.61745, 10.3949 )
+[sub_resource type="AtlasTexture" id="1"]
+atlas = ExtResource("1")
+region = Rect2(129.383, 17.4272, 7.61745, 10.3949)
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3.23322, 4.70181 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(3.23322, 4.70181)
 
-[node name="mushroom" type="StaticBody2D" groups=[
-"food",
-]]
+[node name="mushroom" type="StaticBody2D" groups=["food"]]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = SubResource( 1 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource("2")

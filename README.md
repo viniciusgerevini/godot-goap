@@ -10,6 +10,7 @@ The code is fully documented to explain the reasoning behind the implementation.
 
 You can find a live demo [here](https://viniciusgerevini.github.io/godot-goap).
 
+The main branch works on Godot 4. For Godot 3, check the (godot_3)[https://github.com/viniciusgerevini/godot-goap/tree/godot_3] branch. Godot 3 is the version shown in the demo video.
 
 ## What the example does
 

@@ -21,11 +21,11 @@ func set_actions(actions: Array):
 # Returns a list of actions to be executed.
 #
 func get_plan(goal: GoapGoal, blackboard = {}) -> Array:
-	print("Goal: %s" % goal.get_class())
-	WorldState.console_message("Goal: %s" % goal.get_class())
+	print("Goal: %s" % goal.get_clazz())
+	WorldState.console_message("Goal: %s" % goal.get_clazz())
 	var desired_state = goal.get_desired_state().duplicate()
 
-	if desired_state.empty():
+	if desired_state.is_empty():
 		return []
 
 	return _find_best_plan(goal, desired_state, blackboard)
@@ -92,7 +92,7 @@ func _build_plans(step, blackboard):
   # if the state is empty, it means this branch already
   # found the solution, so it doesn't need to look for
   # more actions
-	if state.empty():
+	if state.is_empty():
 		return true
 
 	for action in _actions:
@@ -112,7 +112,7 @@ func _build_plans(step, blackboard):
 				should_use_action = true
 
 		if should_use_action:
-	  # adds actions pre-conditions to the desired state
+			# adds actions pre-conditions to the desired state
 			var preconditions = action.get_preconditions()
 			for p in preconditions:
 				desired_state[p] = preconditions[p]
@@ -123,12 +123,12 @@ func _build_plans(step, blackboard):
 				"children": []
 				}
 
-		  # if desired state is empty, it means this action
-		  # can be included in the graph.
-		  # if it's not empty, _build_plans is called again (recursively) so
-		  # it can try to find actions to satisfy this current state. In case
-		  # it can't find anything, this action won't be included in the graph.
-			if desired_state.empty() or _build_plans(s, blackboard.duplicate()):
+			# if desired state is empty, it means this action
+			# can be included in the graph.
+			# if it's not empty, _build_plans is called again (recursively) so
+			# it can try to find actions to satisfy this current state. In case
+			# it can't find anything, this action won't be included in the graph.
+			if desired_state.is_empty() or _build_plans(s, blackboard.duplicate()):
 				step.children.push_back(s)
 				has_followup = true
 
@@ -163,6 +163,6 @@ func _transform_tree_into_array(p, blackboard):
 func _print_plan(plan):
 	var actions = []
 	for a in plan.actions:
-		actions.push_back(a.get_class())
+		actions.push_back(a.get_clazz())
 	print({"cost": plan.cost, "actions": actions})
 	WorldState.console_message({"cost": plan.cost, "actions": actions})

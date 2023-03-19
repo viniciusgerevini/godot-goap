@@ -1,7 +1,7 @@
 # This NPC does not use GOAP.
 # This is just a simple script which chooses
 # a random position in the scene to move to.
-extends KinematicBody2D
+extends CharacterBody2D
 
 var _target
 
@@ -43,7 +43,7 @@ func turn_right():
 		return
 
 	$body.flip_h = false
-	$RayCast2D.cast_to *= -1
+	$RayCast2D.target_position *= -1
 
 
 func turn_left():
@@ -51,4 +51,4 @@ func turn_left():
 		return
 
 	$body.flip_h = true
-	$RayCast2D.cast_to *= -1
+	$RayCast2D.target_position *= -1

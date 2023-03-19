@@ -2,7 +2,7 @@ extends GoapGoal
 
 class_name KeepFirepitBurningGoal
 
-func get_class(): return "KeepFirepitBurningGoal"
+func get_clazz(): return "KeepFirepitBurningGoal"
 
 
 func is_valid() -> bool:

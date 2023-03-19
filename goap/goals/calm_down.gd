@@ -2,10 +2,10 @@ extends GoapGoal
 
 class_name CalmDownGoal
 
-func get_class(): return "CalmDownGoal"
+func get_clazz(): return "CalmDownGoal"
 
 func is_valid() -> bool:
-	return WorldState.get_state("is_frightened")
+	return WorldState.get_state("is_frightened", false)
 
 
 func priority() -> int:

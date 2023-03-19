@@ -2,7 +2,7 @@ extends GoapAction
 
 class_name ChopTreeAction
 
-func get_class(): return "ChopTreeAction"
+func get_clazz(): return "ChopTreeAction"
 
 
 func is_valid() -> bool:

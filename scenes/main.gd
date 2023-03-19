@@ -1,7 +1,7 @@
 extends Node2D
 
 
-onready var _hunger_field = $HUD/VBoxContainer/MarginContainer/HBoxContainer/hunger
+@onready var _hunger_field = $HUD/VBoxContainer/MarginContainer/HBoxContainer/hunger
 
 
 func _on_hanger_timer_timeout():
