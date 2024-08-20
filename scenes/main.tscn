@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://b5kiptbuouxhc"]
 
-[ext_resource type="Texture2D" uid="uid://b2ami8x4mxfta" path="res://sprites/forest_.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://b153nqpuv83gr" path="res://sprites/forestDecoration_0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://n0b7wu7gvdv5" path="res://sprites/forest_.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://n2m3m2n4q6cx" path="res://sprites/forestDecoration_0.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://bnysn00thw3g2" path="res://scenes/troll.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cr6noovmcl47a" path="res://scenes/satyr.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b17kgpyktoyps" path="res://scenes/tree.tscn" id="5"]
