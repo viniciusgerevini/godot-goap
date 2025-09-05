@@ -21,8 +21,12 @@ func set_actions(actions: Array):
 # Returns a list of actions to be executed.
 #
 func get_plan(goal: GoapGoal, blackboard = {}) -> Array:
-	print("Goal: %s" % goal.get_clazz())
-	WorldState.console_message("Goal: %s" % goal.get_clazz())
+	
+	# Debugging Messages
+	var goal_script = goal.get_script()
+	print("Goal: %s" % goal_script.get_global_name())
+	WorldState.console_message("Goal: %s" % goal_script.get_global_name())
+	
 	var desired_state = goal.get_desired_state().duplicate()
 
 	if desired_state.is_empty():
@@ -55,7 +59,7 @@ func _find_best_plan(goal, desired_state, blackboard):
 # actions included in the cheapest one.
 #
 func _get_cheapest_plan(plans):
-	var best_plan
+	var best_plan = null
 	for p in plans:
 		_print_plan(p)
 		if best_plan == null or p.cost < best_plan.cost:
@@ -163,6 +167,7 @@ func _transform_tree_into_array(p, blackboard):
 func _print_plan(plan):
 	var actions = []
 	for a in plan.actions:
-		actions.push_back(a.get_clazz())
+		var a_script = a.get_script()
+		actions.push_back(a_script.get_global_name())
 	print({"cost": plan.cost, "actions": actions})
 	WorldState.console_message({"cost": plan.cost, "actions": actions})

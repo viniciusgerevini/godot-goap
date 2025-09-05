@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bnysn00thw3g2"]
 
-[ext_resource type="Texture2D" uid="uid://dg7jc6voq4lg3" path="res://sprites/troll_.png" id="1"]
-[ext_resource type="Script" path="res://scenes/troll.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://c0ugc82inoeka" path="res://sprites/troll_.png" id="1"]
+[ext_resource type="Script" uid="uid://dxfqo1r6qsknl" path="res://scenes/troll.gd" id="2"]
 
 [sub_resource type="AtlasTexture" id="1"]
 atlas = ExtResource("1")

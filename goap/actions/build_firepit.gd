@@ -5,9 +5,6 @@ class_name BuildFirepitAction
 const Firepit = preload("res://scenes/firepit.tscn")
 
 
-func get_clazz(): return "BuildFirepitAction"
-
-
 func get_cost(_blackboard) -> int:
 	return 1
 

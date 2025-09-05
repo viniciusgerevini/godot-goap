@@ -2,8 +2,6 @@ extends GoapAction
 
 class_name CollectFromWoodStockAction
 
-func get_clazz(): return "CollectFromWoodStockAction"
-
 
 func is_valid() -> bool:
 	return WorldState.get_elements("wood_stock").size() > 0

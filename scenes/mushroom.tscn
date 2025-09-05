@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1xnqbmsxtk2j"]
 
-[ext_resource type="Texture2D" uid="uid://b153nqpuv83gr" path="res://sprites/forestDecoration_0.png" id="1"]
-[ext_resource type="Script" path="res://scenes/mushroom.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bse0g0xh16rgc" path="res://sprites/forestDecoration_0.png" id="1"]
+[ext_resource type="Script" uid="uid://1q4y6d7kheke" path="res://scenes/mushroom.gd" id="2"]
 
 [sub_resource type="AtlasTexture" id="1"]
 atlas = ExtResource("1")

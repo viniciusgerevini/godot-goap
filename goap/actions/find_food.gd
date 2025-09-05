@@ -3,9 +3,6 @@ extends GoapAction
 class_name FindFoodAction
 
 
-func get_clazz(): return "FindFoodAction"
-
-
 func get_cost(_blackboard) -> int:
 	return 1
 

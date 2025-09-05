@@ -51,7 +51,7 @@ func init(actor, goals: Array):
 # Returns the highest priority goal available.
 #
 func _get_best_goal():
-	var highest_priority
+	var highest_priority = null
 
 	for goal in _goals:
 		if goal.is_valid() and (highest_priority == null or goal.priority() > highest_priority.priority()):

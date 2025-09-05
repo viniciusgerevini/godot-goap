@@ -3,9 +3,6 @@ extends GoapAction
 class_name FindCoverAction
 
 
-func get_clazz(): return "FindCoverAction"
-
-
 func get_cost(_blackboard) -> int:
 	return 1
 

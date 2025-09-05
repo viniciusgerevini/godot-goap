@@ -2,8 +2,6 @@ extends GoapAction
 
 class_name ChopTreeAction
 
-func get_clazz(): return "ChopTreeAction"
-
 
 func is_valid() -> bool:
 	return WorldState.get_elements("tree").size() > 0

@@ -2,7 +2,6 @@ extends GoapGoal
 
 class_name RelaxGoal
 
-func get_clazz(): return "RelaxGoal"
 
 # relax will always be available
 func is_valid() -> bool:

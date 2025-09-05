@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cr6noovmcl47a"]
 
-[ext_resource type="Texture2D" uid="uid://cdu4syw57sypi" path="res://sprites/satyr_.png" id="1"]
-[ext_resource type="Script" path="res://scenes/satyr.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://c7030d8owv70y" path="res://sprites/satyr_.png" id="1"]
+[ext_resource type="Script" uid="uid://bxr3sij6pvuyf" path="res://scenes/satyr.gd" id="2"]
 
 [sub_resource type="AtlasTexture" id="9"]
 atlas = ExtResource("1")
